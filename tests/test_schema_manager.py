@@ -4,6 +4,7 @@ import pytest
 import pandas as pd
 import sqlite3
 from modules.csv_loader import load_csv, insert_data
+from modules.schema_manager import infer_schema, create_table, get_all_tables, schemas_match
 
 # some sample data
 @pytest.fixture
