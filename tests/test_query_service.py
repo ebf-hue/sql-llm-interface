@@ -23,7 +23,7 @@ def test_valid_query_results(in_memory_db):
 def test_invalid_query(in_memory_db):
     success, msg, res = execute_query(in_memory_db, "DROP TABLE users")
     assert success == False
-    assert results == []
+    assert res == []
 
 # invalid table
 def test_unknown_table(in_memory_db):
