@@ -11,10 +11,11 @@ def in_memory_db():
     conn.commit()
     return conn
 
+@patch("modules.llm_adapter.client")
 def test_translation_string(mock_client, in_memory_db):
     mock_client.messages.create.return_value = MagicMock(content=[MagicMock(text="SELECT * FROM users")])
     res = translate_to_sql(in_memory_db, "show all users")
-    assert result == "SELECT * FROM users"
+    assert res == "SELECT * FROM users"
 
 def test_build_prompt(in_memory_db):
     prompt = build_prompt(in_memory_db, "show all users")
