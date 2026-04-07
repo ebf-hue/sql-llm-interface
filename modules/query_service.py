@@ -1,7 +1,7 @@
 # query_service.py
 
 import sqlite3
-from sql_validator import validate_query
+from modules.sql_validator import validate_query
 
 # actually execute a query, using validate_query and returning if it was successful
 def execute_query(conn: sqlite3.Connection, sql: str) -> tuple[bool, str, list]:

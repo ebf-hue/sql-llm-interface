@@ -5,7 +5,7 @@
 import os
 from anthropic import Anthropic
 from dotenv import load_dotenv
-from schema_manager import get_all_tables, get_table_schema
+from modules.schema_manager import get_all_tables, get_table_schema
 
 load_dotenv()
 

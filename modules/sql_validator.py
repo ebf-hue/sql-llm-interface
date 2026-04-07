@@ -1,7 +1,7 @@
 # sql_validator.py
 
 import sqlite3
-from schema_manager import get_all_tables, get_table_schema
+from modules.schema_manager import get_all_tables, get_table_schema
 
 # helper functions
 def is_select_query(sql: str) -> bool:
