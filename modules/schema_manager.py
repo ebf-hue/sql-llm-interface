@@ -40,6 +40,7 @@ def schemas_match(conn: sqlite3.Connection, table_name: str, df: pd.DataFrame) -
 # create a new table and add the primary key "id"
 def create_table(conn: sqlite3.Connection, table_name: str, df: pd.DataFrame):
     schema = infer_schema(df)
+    schema = {col: dtype for col, dtype in schema.items() if col.lower() != "id"} # filter duplicate id column
     columns = ", ".join([f"{col} {dtype}" for col, dtype in schema.items()])
     sql = f"CREATE TABLE IF NOT EXISTS {table_name} (id INTEGER PRIMARY KEY AUTOINCREMENT, {columns})"
     conn.cursor().execute(sql)
