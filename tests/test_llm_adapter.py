@@ -1,5 +1,6 @@
 # test for llm_adapter
-
+import pytest
+import sqlite3
 from unittest.mock import MagicMock, patch # to hide secret api keys
 from modules.llm_adapter import translate_to_sql, build_prompt
 
