@@ -1,6 +1,6 @@
 # sql-llm-interface
 Project for EC530, introduction to software principles.
-Link to video: ![Google Drive Link](https://drive.google.com/file/d/1YuVhNndVXp2somHVij_BTUFd07Ys11rV/view?usp=sharing)
+Link to video: [Google Drive Link](https://drive.google.com/file/d/1YuVhNndVXp2somHVij_BTUFd07Ys11rV/view?usp=sharing)
 
 ## System Overview
 This project contains a modular system built in Python for querying databases with natural language. Users can load input data from a CSV file and either input SQL queries or ask questions in natural language, which an LLM will translate into SQL. Queries are automatically validated before execution
