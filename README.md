@@ -23,4 +23,7 @@ Tests are automatically run through GitHub actions on every push.
 ## Design Notes
 The CLI does not have direct database access. Additionally, LLM output is validated before any query is executed. No real API key or database is needed to run tests, as they mock the LLM and data. Schema matching compares incoming data to decide between appending or creating.
 
+## Code Flow Diagram
+![Diagram showing the flow of code logic.](llm-sql-adapter-flow.png)
+
 #### Elena Berrios eberrios@bu.edu
